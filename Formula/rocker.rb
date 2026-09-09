@@ -1,15 +1,15 @@
 class Rocker < Formula
   desc "Rocker: a native desktop client for the Docker Engine API."
   homepage "https://github.com/makis-san/rocker"
-  version "0.1.0"
+  version "0.1.1"
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.1.0/rocker-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "395fd796608af7efc16b028cce419987d81470b7416c9ea3c3f61c0c367aa84c"
+      url "https://github.com/makis-san/rocker/releases/download/v0.1.1/rocker-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f49d4b664bb922f81ba28fb511e974588a75c3770063c240f16caddc736dfa3e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.1.0/rocker-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fea8dead55d37d23507a86a85f11cc15c4edc7e57cc17837ccf4d9429bacf22f"
+      url "https://github.com/makis-san/rocker/releases/download/v0.1.1/rocker-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4e12832a0eeea8bf6f18b3477a46c9d82c0989bd3d205f04a0218c6fbbb34c5e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
