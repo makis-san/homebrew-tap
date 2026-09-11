@@ -1,25 +1,25 @@
 class Rocker < Formula
   desc "Rocker: a native desktop client for the Docker Engine API."
   homepage "https://github.com/makis-san/rocker"
-  version "0.2.0"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.0/rocker-aarch64-apple-darwin.tar.xz"
-      sha256 "bcd6d64fb4455766a300278676711b8af589ffca1c10cdec6a2ac830f57a5fb4"
+      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-aarch64-apple-darwin.tar.xz"
+      sha256 "485f26bad144d2ed310c6f1a82e6578253cb5a3feac5c42d0e1ad15ed2948b2b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.0/rocker-x86_64-apple-darwin.tar.xz"
-      sha256 "194b94067f4b13cd2edb2d6f3afe4dfda4fd8d971d06a6b8bea38a989eb6f97f"
+      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-x86_64-apple-darwin.tar.xz"
+      sha256 "5a3bd99405aa0504340dbe29197c1098b80b0c782aa64e63abe6e4fa1007c0c7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.0/rocker-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6a0fa57d0b4b057b4b568fcc7a5b468fea073eb9d763656caf09bc0e9ab3bccb"
+      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d72a2b2b0474e5636b2aad06001aebd74389f4f905af2a03acb47da451979c9b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.0/rocker-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5b5077169f9b7c11c8f39c655655bd7bfb63377ed7af2236691011db04208de8"
+      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "916a2084ca1ced126a6f2562b483a4e5d8d40da09d8979a4011deb33faaecddb"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -49,16 +49,16 @@ class Rocker < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "rocker"
+      bin.install "rocker", "rocker-ext-host"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "rocker"
+      bin.install "rocker", "rocker-ext-host"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "rocker"
+      bin.install "rocker", "rocker-ext-host"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "rocker"
+      bin.install "rocker", "rocker-ext-host"
     end
 
     install_binary_aliases!
