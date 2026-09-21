@@ -1,25 +1,25 @@
 class Rocker < Formula
   desc "Rocker: a native desktop client for the Docker Engine API."
   homepage "https://github.com/makis-san/rocker"
-  version "0.2.1"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-aarch64-apple-darwin.tar.xz"
-      sha256 "485f26bad144d2ed310c6f1a82e6578253cb5a3feac5c42d0e1ad15ed2948b2b"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.0/rocker-aarch64-apple-darwin.tar.xz"
+      sha256 "e9032fca5f32be7817a37c86937f9228bb3a07eb52d98b0f6ab2161cb5ba2354"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-x86_64-apple-darwin.tar.xz"
-      sha256 "5a3bd99405aa0504340dbe29197c1098b80b0c782aa64e63abe6e4fa1007c0c7"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.0/rocker-x86_64-apple-darwin.tar.xz"
+      sha256 "7225daaebc136ac1a11b67d110a918c7ac1aecc917525e63aff85a0cadc10879"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d72a2b2b0474e5636b2aad06001aebd74389f4f905af2a03acb47da451979c9b"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.0/rocker-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e4f85cec7919aee944f6444d5e956b168442abcc8c6f5a5dfd2e0b8c106138e1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.2.1/rocker-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "916a2084ca1ced126a6f2562b483a4e5d8d40da09d8979a4011deb33faaecddb"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.0/rocker-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c1766a4c98ed14edcdee92da8e85380d506846645994cd44024eb7c5f7080e07"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
