@@ -1,36 +1,36 @@
 class Rocker < Formula
   desc "Rocker: a native desktop client for the Docker Engine API."
   homepage "https://github.com/makis-san/rocker"
-  version "0.3.4"
+  version "0.3.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.3.4/rocker-aarch64-apple-darwin.tar.xz"
-      sha256 "62b542d9dd47e4c022092f5af022dbb56baf3d67865a73cca440d509e93df292"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.5/rocker-aarch64-apple-darwin.tar.xz"
+      sha256 "702202c754d261b24d676f159d7d89b8f55daa357a8a8c0a40a7f94eed3ab3f2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.3.4/rocker-x86_64-apple-darwin.tar.xz"
-      sha256 "f57526b286cf005c4ed57945c6580f025dcaf02b81af5e9c9eae1af346267d7c"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.5/rocker-x86_64-apple-darwin.tar.xz"
+      sha256 "e8347b1bebf9e081b88348d4d55b2a7497a35c573a9caf42411264dbd2cd6a68"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makis-san/rocker/releases/download/v0.3.4/rocker-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6874dd7d4f2b4826fa018b78ed9ccac27a159ac197cc36f3fd7e1d4d59779ed0"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.5/rocker-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d94cb264e38ab75805f261800a397aed137012edbfd777d65b00dc207e42720b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makis-san/rocker/releases/download/v0.3.4/rocker-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ef0f587984c9dc040efdd1c678136a5ee0676591790205395898f4d38aaa470f"
+      url "https://github.com/makis-san/rocker/releases/download/v0.3.5/rocker-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2863b062ad2da93231721acb4ffa7d76a1fb727ee71c2af07650fa7d3070d7bc"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
+    "aarch64-apple-darwin": {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-pc-windows-gnu":     {},
-    "x86_64-unknown-linux-gnu":  {},
-  }.freeze
+    "x86_64-apple-darwin": {},
+    "x86_64-pc-windows-gnu": {},
+    "x86_64-unknown-linux-gnu": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
